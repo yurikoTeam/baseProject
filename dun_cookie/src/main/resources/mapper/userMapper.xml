@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dun_cookie.dao.UserMapper">
+    <select id="getUserById" parameterType="String" resultType="com.dun_cookie.entity.User">
+        SELECT userid,username,password,createTime,salt
+          FROM t_user
+         WHERE userid = #{userid}
+    </select>
+</mapper>
